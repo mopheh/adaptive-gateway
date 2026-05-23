@@ -1,0 +1,7 @@
+# Example .npmrc for CI/local non-interactive publishing
+# Do NOT commit a real token into the repo.
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+
+# Usage:
+# export NPM_TOKEN=your_token_here
+# npm publish --access public
