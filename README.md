@@ -56,34 +56,3 @@ import { adaptiveGateway, createGateKeepMiddleware, gateKeep } from 'adaptive-ga
 ## Notes
 
 This package is designed to be used in an Express app and assumes a Redis client and metrics pipeline are configured in the local project.
-
-## Publishing
-
-### Option 1: Publish locally with 2FA
-
-If your npm account uses two-factor authentication, publish with an OTP:
-
-```bash
-npm version patch
-npm publish --access public --otp=123456
-```
-
-If you are prompted for the OTP, enter the code from your authenticator.
-
-### Option 2: Publish from GitHub Actions
-
-This repo includes a GitHub Actions workflow at `.github/workflows/publish.yml`.
-
-1. Create an npm automation token on https://www.npmjs.com/
-   - Go to Access Tokens
-   - Create an automation token
-   - Enable bypass for 2FA if your account requires it
-2. Add the token to your repository secrets as `NPM_TOKEN`
-3. Push a semantic version tag, for example:
-
-```bash
-git tag v1.0.1
-git push origin v1.0.1
-```
-
-The workflow will run and publish the package automatically.
