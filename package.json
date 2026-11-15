@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "nodemon examples/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [
     "express",
